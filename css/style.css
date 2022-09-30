@@ -1,0 +1,406 @@
+:root {
+    --backgroundSize: 85vh;
+    --whiteColor: #fff;
+    --purpleColor: #CCA9CA;
+    --blueColor: #4D97B4;
+    --lightGrayColor: #FFFFFF80;
+}
+/* **basics ** */
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+    color: var(--whiteColor);
+}
+li {
+    list-style: none;
+}
+
+/* backgrounds */
+.background-flowers {
+    background-color: var(--purpleColor);
+    background-image:   url(../assets/components/background/bg-flower-left-250x450.png), 
+                        url(../assets/components/background/bg-flower-right250x400.png), 
+                        url(../assets/components/background/bg-line1200x3.png), 
+                        url(../assets/components/background/bg-line1200x3.png);
+    background-position: left top 10%, right bottom 10%, center 3%, center 97%;
+    background-repeat: no-repeat;
+    background-size: 20% auto, 20% auto, 75% 3px, 75% 3px;
+    position: relative;
+}
+.background-lines {
+    background-color: var(--blueColor);
+    background-image:   url(../assets/components/background/bg-line1200x3.png), 
+                        url(../assets/components/background/bg-line1200x3.png);
+    background-position: center 3%, center 97%;
+    background-repeat: no-repeat;
+    background-size: 75% 3px, 75% 3px;
+    position: relative;
+}
+
+/* **** navbar **** */
+#navbar {
+    background-color: var(--purpleColor);
+    color: var(--whiteColor);
+}
+.logo:hover {
+    opacity: 0.8;
+    transition: .3s ease;
+}
+.navbar-brand {
+    margin-right: 2rem;
+}
+
+.nav-item a{
+    list-style: none;
+    color: var(--whiteColor);
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+.nav-item li {
+    text-align: center;
+}
+.navbar-toggler {
+    color: var(--whiteColor);
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+    color: var(--blueColor);
+}
+
+
+
+
+/* **** hero **** */
+
+.hero {
+    background-image: url(../assets/components/hero/hero-basic02.jpg);
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: var(--backgroundSize);
+}
+
+hgroup {
+    height: 80%;
+}
+
+h1 {
+    font-size: clamp(3rem, 4vw, 5rem);
+    font-weight: 700;
+}
+h2 {
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+    font-weight: 700;
+}
+p {
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+}
+
+
+
+/* **** about-page **** */
+.about-page {
+    min-height: var(--backgroundSize);
+}
+.about-page-container .row {
+    min-height: var(--backgroundSize);
+  
+}
+
+.about-left h2 {
+    font-size: clamp(2.5rem, 3.5vw, 4rem);
+    line-height: 1.5;
+    word-spacing: 10em;
+}
+
+
+
+/* **** gallery **** */
+.gallery {
+    min-height: 18.75rem;
+    padding: 3rem 0;
+}
+.gallery-wrapper {
+    outline: 3px solid var(--lightGrayColor);
+    outline-offset: -2rem;
+}
+.gallery-wrapper a{
+    overflow: hidden;
+
+}
+.gallery-wrapper img {
+    transition: 500ms;  
+}
+.gallery-wrapper img:hover {
+    transform: scale(1.03);
+}
+
+/* reviews */
+.reviews {
+    min-height: var(--backgroundSize);
+}
+
+.reviews-container {
+    padding: 3rem 0;
+}
+.review-wrapper {
+    padding: 0;
+}
+
+.reviews-rating {
+    background: var(--blueColor);
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+    text-align: center;
+    outline: 1px solid var(--lightGrayColor);
+    outline-offset: -1rem;
+    display: block;
+    margin-left: 1rem;
+
+}
+.reviews-rating h3 {
+    padding-top: 30%;
+    font-weight: 700;
+
+  
+}
+.reviews-rating:hover h3{
+    color: var(--lightGrayColor);
+}
+.reviews-rating:hover {
+    color: var(--lightGrayColor);
+    outline: 1px solid var(--purpleColor);
+}
+.review {
+    padding-top: 1rem;
+    margin: 0 1rem;
+}
+.reviews-right a {
+    color: var(--whiteColor);
+    text-decoration: none;
+    padding: 0 !important;
+}
+
+
+/* about-city */
+.about-city {
+    min-height: var(--backgroundSize);
+    padding-bottom: 1rem;
+}
+.about-city-left {
+    padding: 3rem 1rem;  
+    height: 85%;
+    line-height: 1.1;
+}
+.about-city-left li {
+    list-style-type: "- ";
+}
+.about-city-right {
+    margin: 3rem 0;
+    height: 85%;
+}
+
+
+/* booking */
+.booking {
+    min-height: var(--backgroundSize);
+}
+.booking-container {
+    padding-top: 10vh;
+}
+.arrow {
+    padding-top: 3vh;
+}
+.arrow img {
+    height: 15vh;
+}
+.booking-btn {
+    width: 18rem;
+    height: 8rem;
+    background-color: var(--whiteColor);
+    border-radius: 15px;
+    color: var(--blueColor);
+    margin-top: 5vh;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.booking-btn:hover {
+    border-color: var(--blueColor);
+    box-shadow: 0 0 1rem var(--blueColor);
+}
+.booking-btn a {
+    color: var(--blueColor);
+    font-size: 4rem;
+    text-decoration: none;
+}
+.booking-btn a:hover {
+    color: var(--purpleColor);
+}
+.booking p {
+    font-size: 2rem;
+    padding-top: 2vh;
+}
+.signature {
+    padding: 3rem 0;
+}
+.signature img {
+    height: 10vh;
+}
+
+/* contact */
+.contact {
+    background-color: var(--blueColor);
+    min-height: var(--backgroundSize);
+}
+.contact-container {
+    min-height: 100%;
+    padding-top: 8vh;
+}
+.contact-left {
+    line-height: 1.2;
+    min-height: 90%;
+    padding-bottom: 2rem;
+}
+.location i {
+    font-size: 3rem;
+}
+.location a i{
+    padding-right: 2rem;
+    color: var(--lightGrayColor);
+}
+.location a i:hover {
+    color: var(--whiteColor);
+}
+.location p {
+    font-size: 1.125rem;
+}
+.phone img {
+    padding-right: 2rem;
+}
+.phone p {
+    font-size: 1.125rem;
+}
+
+/* contact form */
+.contact-form {
+    background-color: var(--purpleColor);
+    border-radius: 1.5rem;
+    padding: 2rem;
+}
+
+.form-outline input[type=text]:focus,
+.form-outline [type=text].form-control:focus,
+.form-outline [type=email].form-control:focus,
+.form-outline [type=email].form-control:focus,
+.form-outline textarea:focus,
+.btn:focus, .btn:active {
+    outline: none;
+    box-shadow: 0 0 15px var(--blueColor);
+    font-size: 1rem;
+    color: var(--blueColor);
+
+}
+.contact-form input,
+.contact-form textarea {
+    color: var(--blueColor);
+}
+/* submit button */
+.submit-btn {
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--whiteColor);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;  
+    font-size: 1.5rem;
+    color: var(--blueColor);
+    text-decoration: none;
+}
+.submit-btn:hover {
+    outline: none;
+    border-color: var(--blueColor);
+    box-shadow: 0 0 1rem var(--blueColor);
+    color: var(--purpleColor);
+}
+.submit-btn:active {
+    color: var(--purpleColor);
+}
+/* textarea scrollbar styling */
+textarea::-webkit-scrollbar {
+    width: 12px;
+}
+textarea {
+    scrollbar-width: thin;
+    scrollbar-color: var(--purpleColor) var(--blueColor);
+}
+textarea::-webkit-scrollbar-track {
+    background: var(--lightGrayColor);
+    border-radius: 0 5px 5px 0;
+}
+textarea::-webkit-scrollbar-thumb {
+    background-color: var(--blueColor) ;
+    border-radius: 3px;
+    border: 2px solid var(--blueColor);
+}
+
+
+
+/* ** footer ** */
+.footer {
+    height: 9rem;
+    background-color: var(--purpleColor);
+
+}
+.social {
+    width: 25%;
+    display: inline-flex;
+    margin-left: 1rem;
+}
+.social a {
+    font-size: 2rem;
+    align-self: center; 
+    padding-left: 0.5rem;
+}
+
+
+/* ** media ** */
+@media screen and (max-width: 767px) {
+    .hero {
+        background-position: 25%;
+    }
+    .about-city-left {
+        margin-bottom: 0; 
+    }
+    .about-city-right {
+        margin: 0rem 0 3rem 0;
+        height: 85%;
+    }
+    .booking-btn {
+        width: 12rem;
+        height: 6rem;
+    }
+    .booking-btn a {
+        font-size: 2.5rem;
+    }
+    .signature img {
+        height: 10vw;
+    }
+    .contact-right {
+        padding-bottom: 3rem;
+    }
+}
+
+  /* ** gallery page ** */
